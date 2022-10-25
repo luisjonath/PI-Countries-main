@@ -1,0 +1,29 @@
+.background {
+    background-image: url("../../images//LandingPage.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 1080px;
+    background-repeat: no-repeat;
+}
+
+.btn{
+    background-color: yellow;
+    border: yellow;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: 'Press Start 2P';
+    font-size: 30px;
+    height: 60px;
+    width: 180px
+}
+.btn:hover{
+    background-color: darkturquoise;
+
+}
+
+.developed{
+    color: yellow;
+    
+}

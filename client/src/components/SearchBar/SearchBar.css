@@ -1,0 +1,18 @@
+.search{
+    background-image: url("../../images/Textura_bloque_de_tierra.jpg");
+    color: rgb(236, 233, 12);
+    height: 25px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(236, 233, 12);
+}
+
+.btnSearch{
+    background-color: yellow;
+    height:29px
+}
+
+.btnSearch:hover{
+    background-color: rgb(21, 136, 65);
+}

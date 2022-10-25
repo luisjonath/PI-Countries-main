@@ -1,0 +1,88 @@
+.backgroundDetail{
+     background-image: url("../../images/mountains.jpg");
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     width: 100%;
+     height: 100vh;
+     
+    /* background-size: cover;
+    background-position: center ;
+    height: 100vh;
+    display: flex;
+    flex-direction: center;  */
+    
+}
+.buttonsDetails{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+;
+}
+.containerDetail{
+    background-image: url("../../images/Textura_bloque_de_tierra.jpg");
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 20px;
+    margin-right: 700px;
+    margin-bottom: 200px;
+    margin-left: 700px;
+    height: 90%;
+    /* background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: right;
+    justify-content: center;
+    width: 600px; */
+}
+
+.containerinfo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.countryname{
+    color: rgb(236, 233, 12);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.countryid{
+    color: rgb(236, 233, 12);
+    font-family: fantasy
+}
+.label{
+    color: rgb(236, 233, 12);
+    font-family:fantasy
+}
+
+.countryactivity{
+    color: rgb(236, 233, 12);
+    font-family:fantasy
+}
+
+.containeractivity{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btnHome{
+    background-color: yellow;
+    height:29px
+}
+
+.btnHome:hover{
+    background-color: rgb(36, 119, 175);
+}
+
+.btnActivity{
+    background-color: yellow;
+    height:29px
+}
+
+.btnActivity:hover{
+    background-color: rgb(36, 119, 175);
+}
