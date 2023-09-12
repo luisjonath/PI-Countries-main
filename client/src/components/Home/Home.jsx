@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import {filterByActivities, filterByContinent, getActivities, getByName, getCountries, orderBy, orderByPopulation} from "../../actions/index"
+import {filterByActivities, filterByContinent, filterByPopulation, getActivities, getByName, getCountries, orderBy, orderByPopulation} from "../../actions/index"
 import Card from "../Card/Card"
 import SearchBar from '../SearchBar/SearchBar'
 import Pagination from '../Pagination/Pagination'
@@ -36,6 +36,11 @@ const Home = () => {
     dispatch(getCountries())
   }
 
+  function handleActivities(e){
+    e.preventDefault()
+    dispatch(getActivities())
+  }
+
   function handleOrder(e) {
     dispatch(orderBy(e.target.value))
     setCurrentPage(1)
@@ -59,7 +64,12 @@ const Home = () => {
     setCurrentPage(1)
     setOrder(e.target.value)
   }
-
+function handleFilterByPopulation(e){
+  /* e.preventDefault(e) */
+  dispatch(filterByPopulation())
+  setCurrentPage(1)
+  setOrder()
+}
 
   return (
     <div className='backgroundHome'>
@@ -101,6 +111,10 @@ const Home = () => {
         </div>
         <div>
         <button onClick={(e)=>handleClick(e)} className="reloadbtn">Reload countries</button>
+        </div>
+        <div>
+          
+          <button onClick={(e)=> handleFilterByPopulation(e)}>Activity</button>
         </div>
         <div>
           <Link to={"/activities"}>

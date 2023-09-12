@@ -8,6 +8,7 @@ import {
     ORDER_BY_POPULATION, 
     FILTER_BY_ACTIVITIES, 
     ORDER_BY, 
+    FILTER_BY_POPULATION
     } from "../actions/actionTypes"
 
 const initialState = {
@@ -85,6 +86,14 @@ export default function rootReducer(state = initialState, action){
             }
           }
             
+          case FILTER_BY_POPULATION:{
+            const allPopulation = [...state.allCountries]
+            const populationFiltered = allPopulation.filter((e)=> e.population > 200000000)
+            return {state,
+            countries: populationFiltered
+        }
+          }
+
         case ORDER_BY:{
             let orderByCountries = action.payload === "asc" ?
             state.countries.sort(function (a, b) {

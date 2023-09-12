@@ -84,6 +84,12 @@ export function orderByPopulation(payload) {
   };
 }
 
+export function filterByPopulation(){
+  return{
+    type: "FILTER_BY_POPULATION"
+  }
+}
+
 export function filterByActivities(payload) {
   return {
     type: FILTER_BY_ACTIVITIES,
