@@ -13,10 +13,12 @@ import {
 
 /* http://localhost:3001 */
 
+const URL = process.env.REACT_APP_API_KEY;
+
 export function getCountries() {
   return async function (dispatch) {
     
-      const json = await axios.get(`http://localhost:3001/countries`);
+      const json = await axios.get(`${URL}/countries`);
       return dispatch({
         type: GET_COUNTRIES,
         payload: json.data,
@@ -27,7 +29,7 @@ export function getCountries() {
 
 export function getDetail(id) {
   return async function (dispatch) {
-      const country = await axios.get(`http://localhost:3001/countries/${id}`);
+      const country = await axios.get(`${URL}/countries/${id}`);
       return dispatch({
         type: GET_DETAIL,
         payload: country.data,
@@ -38,7 +40,7 @@ export function getDetail(id) {
 export function getActivities() {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3001/activities`);
+      const response = await axios.get(`${URL}/activities`);
       return dispatch({
         type: GET_ACTIVITIES,
         payload: response.data,
@@ -51,7 +53,7 @@ export function getActivities() {
 
 export function postActivity(payload){
   return async function(dispatch){
-    const activity = await axios.post(`http://localhost:3001/activities`, payload)
+    const activity = await axios.post(`${URL}/activities`, payload)
     return activity
   }
 }
@@ -59,7 +61,7 @@ export function postActivity(payload){
 export function getByName(name) {
   return async function (dispatch) {
     try {
-      const country = await axios.get(`http://localhost:3001/countries/name?name=${name}`);
+      const country = await axios.get(`${URL}/countries/name?name=${name}`);
       return dispatch({
         type: GET_BY_NAME,
         payload: country.data,
