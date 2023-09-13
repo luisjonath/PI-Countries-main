@@ -137,7 +137,7 @@ function handleFilterByPopulation(e){
           <div className='countries_container'>
           {currentCountries.length === 0 
           ? <Loading />
-          :  currentCountries.map((c) => (
+          :  currentCountries?.map((c) => (
               <Card
                 key={c.id}
                 id={c.id}

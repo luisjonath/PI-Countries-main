@@ -34,6 +34,7 @@ router.get("/create", async (req, res) => {
     res.json(countriesInDb);
   } catch (error) {
     console.log(error);
+    res.json(error)
   }
 });
 
